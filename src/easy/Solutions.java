@@ -17,4 +17,11 @@ public class Solutions {
         }
         return null;
     }
+
+    //9. Palindrome Number
+    public boolean isPalindrome(int x) {
+        String number = Integer.toString(x);
+        String contrary = new StringBuilder(number).reverse().toString();
+        return contrary.equals(number);
+    }
 }
