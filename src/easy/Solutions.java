@@ -24,4 +24,13 @@ public class Solutions {
         String contrary = new StringBuilder(number).reverse().toString();
         return contrary.equals(number);
     }
+
+    //136. Single Number
+    public int singleNumber(int[] nums) {
+        int result = 0;
+        for (int num : nums) {
+            result ^= num;
+        }
+        return result;
+    }
 }
