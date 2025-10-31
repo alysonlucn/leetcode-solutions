@@ -1,6 +1,8 @@
 package easy;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Solutions {
@@ -89,5 +91,25 @@ public class Solutions {
         }
 
         return count;
+    }
+
+
+    //412. Fizz Buzz
+    public List<String> fizzBuzz(int n) {
+        List<String> strings = new ArrayList<>();
+
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                strings.add("FizzBuzz");
+            } else if (i % 5 == 0) {
+                strings.add("Buzz");
+            } else if (i % 3 == 0) {
+                strings.add("Fizz");
+            } else {
+                strings.add(Integer.toString(i));
+            }
+        }
+
+        return strings;
     }
 }
