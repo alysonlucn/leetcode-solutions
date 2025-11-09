@@ -235,4 +235,25 @@ public class Solutions {
 
         return count;
     }
+
+    //1684. Count the Number of Consistent Strings
+    public int countConsistentStrings(String allowed, String[] words) {
+        int count = 0;
+
+        for (int i = 0; i < words.length; i++) {
+            boolean isValid = true;
+            for (int j = 0; j < words[i].length(); j++) {
+                char letter = words[i].charAt(j);
+                if (!allowed.contains("" + letter)) {
+                    isValid = false;
+                    break;
+                }
+            }
+            if (isValid) {
+                count++;
+            }
+        }
+
+        return count;
+    }
 }
