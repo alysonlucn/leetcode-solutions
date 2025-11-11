@@ -359,4 +359,9 @@ public class Solutions {
 
         return count == 3;
     }
+
+    //709. To Lower Case
+    public String toLowerCase(String s) {
+        return s.toLowerCase();
+    }
 }
