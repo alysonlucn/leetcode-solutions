@@ -346,4 +346,17 @@ public class Solutions {
 
         return concatenationWord1.toString().equals(concatenationWord2.toString());
     }
+
+    //1952. Three Divisors
+    public boolean isThree(int n) {
+        int count = 0;
+
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                count++;
+            }
+        }
+
+        return count == 3;
+    }
 }
