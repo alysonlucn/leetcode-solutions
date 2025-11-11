@@ -331,4 +331,19 @@ public class Solutions {
 
         return result;
     }
+
+    //1662. Check if Two String Arrays are Equivalent
+    public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
+        StringBuilder concatenationWord1 = new StringBuilder();
+        StringBuilder concatenationWord2 = new StringBuilder();
+
+        for (String word : word1) {
+            concatenationWord1.append(word);
+        }
+        for (String word : word2) {
+            concatenationWord2.append(word);
+        }
+
+        return concatenationWord1.toString().equals(concatenationWord2.toString());
+    }
 }
