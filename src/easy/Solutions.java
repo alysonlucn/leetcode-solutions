@@ -93,7 +93,6 @@ public class Solutions {
         return count;
     }
 
-
     //412. Fizz Buzz
     public List<String> fizzBuzz(int n) {
         List<String> strings = new ArrayList<>();
@@ -257,7 +256,6 @@ public class Solutions {
         return count;
     }
 
-
     //1365. Smaller Numbers Than Current
     public int[] smallerNumbersThanCurrent(int[] nums) {
         int[] smallerNumbers = new int[nums.length];
@@ -383,6 +381,30 @@ public class Solutions {
 
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] - arr[i - 1] != difference) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    //1941. Check if All Characters Have Equal Number of Occurrences
+    public boolean areOccurrencesEqual(String s) {
+        int reference = 0;
+        for(int i = 0; i < s.length(); i++) {
+            if(s.charAt(0) == s.charAt(i)) {
+                reference++;
+            }
+        }
+
+        for(int i = 1; i < s.length(); i++) {
+            int count = 0;
+            for(int j = 1; j < s.length(); j++) {
+                if(s.charAt(i) == s.charAt(j)) {
+                    count++;
+                }
+            }
+            if(count != reference) {
                 return false;
             }
         }
