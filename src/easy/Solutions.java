@@ -435,4 +435,24 @@ public class Solutions {
 
         return true;
     }
+
+    //1688. Count of Matches in Tournament
+    public int numberOfMatches(int n) {
+        int totalMatches = 0;
+
+        while (n > 1) {
+            int matches;
+
+            if (n % 2 == 0) {
+                matches = n / 2;
+            } else {
+                matches = (n - 1) / 2;
+            }
+
+            totalMatches += matches;
+            n = n - matches;
+        }
+
+        return totalMatches;
+    }
 }
