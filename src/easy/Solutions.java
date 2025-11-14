@@ -411,4 +411,28 @@ public class Solutions {
 
         return true;
     }
+
+    //242. Valid Anagram
+    public boolean isAnagram(String s, String t) {
+        if(s.length() != t.length()) {
+            return false;
+        }
+
+        int[] count = new int[26];
+
+        for(int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            char d = t.charAt(i);
+            count[c - 'a']++;
+            count[d - 'a']--;
+        }
+
+        for(int i = 0; i < count.length; i++) {
+            if(count[i] != 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
